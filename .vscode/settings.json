@@ -1,0 +1,48 @@
+{
+    "amiga-assembly.vasm": {
+        "enabled": false,
+        "file": "/opt/amiga/bin/vasmm68k_mot",
+        "options": [
+            "-m68000",
+            "-Fhunk",
+            "-linedebug"
+        ]
+    },
+    "other": {
+        "workspaceFolder": "~/Dropbox/Amy/DL"
+    },
+    "files.associations": {
+        "classbase.h": "c",
+        "sdi_compiler.h": "c",
+        "types.h": "c",
+        "sdi_lib.h": "c",
+        "dos.h": "c",
+        "classes.h": "c",
+        "execbase.h": "c",
+        "libraries.h": "c",
+        "memory.h": "c",
+        "zz9000.h": "c",
+        "picasso96.h": "c",
+        "picasso96_protos.h": "c",
+        "exec.h": "c",
+        "asl.h": "c",
+        "intuition.h": "c",
+        "alib_protos.h": "c",
+        "screens.h": "c",
+        "cstdlib": "cpp",
+        "input.h": "c",
+        "zz9k_env.h": "c",
+        "zz9000bridge.h": "c",
+        "stdint.h": "c",
+        "printf.h": "c",
+        "math.h": "c",
+        "unistd.h": "c",
+        "stddef.h": "c",
+        "mandel.h": "c",
+        "main.h": "c",
+        "cybergraphics.h": "c",
+        "cybergraphics_protos.h": "c",
+        "graphics.h": "c",
+        "gfx.h": "c"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Amiga",
+            "includePath": [
+                "/opt/amiga/**", "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_NO_INLINE"
+            ],
+            "compilerPath": "/opt/amiga/bin/m68k-amigaos-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

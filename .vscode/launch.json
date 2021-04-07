@@ -1,0 +1,69 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Remote Attach",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "~/Downloads/zz9kmandel",
+            "MIMode": "gdb",
+            "cwd": "${workspaceFolder}",
+            "osx": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/opt/amiga/bin/m68k-amigaos-gdb",
+                "miDebuggerServerAddress": "192.168.1.63:2345",
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/fs-uae/hd0/hello",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "miDebuggerServerAddress": "localhost:2345",
+            "environment": [],
+            "externalConsole": false,
+            "osx": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/opt/amiga/bin/m68k-amigaos-gdb"
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "type": "uae-run",
+            "request": "launch",
+            "name": "Run",
+            "buildWorkspace": true,
+            "emulator": "${config:other.workspaceFolder}/bin/fs-uae",
+            "windows": {
+                "emulator": "${config:other.workspaceFolder}/bin/fs-uae.exe",
+            },
+            "emulatorWorkingDir": "${config:other.workspaceFolder}/bin",
+            "options": [
+                "--chip_memory=1024",
+                "--hard_drive_0=${workspaceFolder}/fs-uae/hd0",
+                "--joystick_port_1=none",
+                "--amiga_model=A1200",
+                "--slow_memory=1792",
+                "--automatic_input_grab=0",
+                "--bsdsocket-library=1"
+            ],
+            "preLaunchTask": "Build"
+        }
+    ]
+}
