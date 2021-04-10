@@ -15,7 +15,7 @@ This must be considered EXPERIMENTAL and BUGGY for now. It might just crash your
 
 # KNOWN BUGS
 
-It seems to work most of the times, but sometimes it just won't load or end up crashing the board (one of the ARM core gets stuck).<br/>
+It seems to work most of the times, but sometimes it just won't load or end up crashing the board (one of the ARM cores gets stuck).<br/>
 Apparently this is due to the second ARM core not properly resetting and getting stuck somewhere (an IRQ?).<br/>
 Seems to be an issue with firmwares 1.5+ (at least on my setup even the existing examples have never worked properly).
 
@@ -30,7 +30,7 @@ To compile the ARM code, please refer to the ZZ9K SDK above (you need to install
 # Configuration
 
 Most of the variables and configs are preset in the Makefiles, with comments.<br/>
-A sample config file is provided for Visual Studio Code.<br/
+A sample config file is provided for Visual Studio Code.<br/>
 It also assumes that Bebbo's amiga-gcc is installed in /opt/amiga/ (see above).<br/>
 
 # Building
