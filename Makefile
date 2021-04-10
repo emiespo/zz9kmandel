@@ -3,17 +3,21 @@
 # https://github.com/bebbo/amiga-gcc
 #
 
-# You can configure the names of the main executable here.
-PROGNAME = mandel
-68K_PROGNAME = $(PROGNAME)-68k
-# To change this one, also change substititions arm-code/Makefile
-ARM_PROGNAME = '$(PROGNAME)-arm.bin'
-# Any extra include that might be needed from the ARM side to use includes from the Amiga side.
-ARM_INCLUDES= # use the format: "-I..."
-
 # Set this to 1 to build a pure 68k exe (benchmarks, etc.). This is also needed to fix endianess.
 # Make sure to run "make clean" if you change this.
-PURE_68K=0
+PURE_68K=1
+
+# You can configure the names of the main executable here.
+PROGNAME = mandel
+ifeq ($(PURE_68K), 1)
+68K_PROGNAME = $(PROGNAME)-pure68k
+else
+68K_PROGNAME = $(PROGNAME)-68k
+endif
+# To change this one, also change substititions arm-code/Makefile
+ARM_PROGNAME = '$(PROGNAME)-arm.bin'
+# Any extra include path that might be needed from the ARM side to use includes from the Amiga side.
+ARM_INCLUDES= # use the format: "-I..."
 
 # Exported to the ARM side
 export ARM_PROGNAME
